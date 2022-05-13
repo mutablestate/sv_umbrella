@@ -4,6 +4,7 @@ defmodule SvWeb.Router do
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
+    plug PhoenixGon.Pipeline, camel_case: true
     plug :fetch_live_flash
     plug :put_root_layout, {SvWeb.LayoutView, :root}
     plug :protect_from_forgery
