@@ -25,7 +25,16 @@ config :sv_web, SvWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "7bou1Z7y33VSHJSjCwf6QCo4fw0Kme/dZYoOcclsAdx582DQiccDuvtPFWLh9/Ls",
   watchers: [
-    node: ["build.js", "--watch", cd: Path.expand("../apps/sv_web/assets", __DIR__)]
+    node: ["build.js", "--watch", cd: Path.expand("../apps/sv_web/assets", __DIR__)],
+    npx: [
+      "tailwindcss",
+      "--config=tailwind.config.cjs",
+      "--input=css/app.css",
+      "--output=../priv/static/assets/app.css",
+      "--postcss",
+      "--watch",
+      cd: Path.expand("../apps/sv_web/assets", __DIR__)
+    ]
   ]
 
 # ## SSL Support

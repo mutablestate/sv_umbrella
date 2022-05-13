@@ -12,6 +12,7 @@ const loader = {
 
 const plugins = [
   esbuildSvelte({
+    compilerOptions: { css: true },
     preprocess: sveltePreprocess({ postcss: true }),
   }),
 ];

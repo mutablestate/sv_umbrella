@@ -9,15 +9,16 @@
   "type": "module",
   "scripts": {
     "svelte-check": "svelte-check --tsconfig ./tsconfig.json",
-    "svelte:watch": "yarn svelte-check --watch"
+    "svelte:watch": "pnpm svelte-check --watch"
   },
   "devDependencies": {
     "@tsconfig/svelte": "^3.0.0",
     "@types/phoenix_live_view": "^0.15.1",
     "autoprefixer": "^10.4.7",
-    "esbuild": "^0.14.38",
+    "esbuild": "^0.14.39",
     "esbuild-svelte": "^0.7.0",
     "postcss": "^8.4.13",
+    "postcss-import": "^14.1.0",
     "postcss-load-config": "^3.1.4",
     "svelte": "^3.48.0",
     "svelte-check": "^2.7.0",

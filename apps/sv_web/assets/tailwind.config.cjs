@@ -1,10 +1,12 @@
 module.exports = {
-  content: ["./js/App.svelte"],
+  content: ["./js/**/*.{html,svelte}"],
+  darkMode: "class",
   theme: {
-    colors: {
-      salmon: "#ef8f70",
+    extend: {
+      colors: {
+        salmon: "#ef8f70",
+      },
     },
-    extend: {},
   },
   plugins: [],
 };

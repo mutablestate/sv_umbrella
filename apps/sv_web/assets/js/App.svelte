@@ -2,12 +2,14 @@
   let welcome: string = "Hey Svelte!";
 </script>
 
-<div class="welcome">
-  {welcome}
-</div>
+<header class="welcome">
+  {welcome} @apply in style tag
+</header>
+<main class="text-center">Inline tailwind</main>
+<footer>@apply in external css</footer>
 
 <style lang="postcss">
   .welcome {
-    @apply text-salmon text-center text-2xl;
+    @apply text-center text-salmon;
   }
 </style>
