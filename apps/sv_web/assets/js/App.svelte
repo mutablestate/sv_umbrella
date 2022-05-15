@@ -1,10 +1,12 @@
 <script lang="ts">
+  import ChatRoom from "@/views/ChatRoom.svelte";
+
   let { isAuthed } = window.Gon.assets();
   let welcome: string = "Hey Svelte!";
 </script>
 
 <header>
-  <h1 class="welcome">{welcome} @apply in style tag</h1>
+  <h1 class="welcome">{welcome}</h1>
 </header>
 
 {#if isAuthed}
@@ -12,8 +14,9 @@
 {:else}
   <main class="text-center">Unauthorized</main>
 {/if}
+<ChatRoom />
 
-<footer>@apply in external css</footer>
+<footer>@mutablestate</footer>
 
 <style lang="postcss">
   header {

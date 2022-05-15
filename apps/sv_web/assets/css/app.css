@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 footer {
-  @apply text-center bg-salmon rounded-md m-4 p-2;
+  @apply block w-full text-center rounded-md m-4 p-2 fixed bottom-0;
 }
